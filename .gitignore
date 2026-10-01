@@ -1,0 +1,28 @@
+# Generated memos
+out/
+
+# Internal dogfood runs
+dogfood/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / virtualenvs
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Secrets and local env
+.env
+.env.*
+secrets
+secrets/
+*.pem
+*.key

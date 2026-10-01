@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Thin wrapper: python -m decision_one_pager from the repo root.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}"
+if command -v python3 >/dev/null 2>&1; then
+  PY=python3
+elif command -v python >/dev/null 2>&1; then
+  PY=python
+else
+  echo "error: python3 not found" >&2
+  exit 127
+fi
+exec "$PY" -m decision_one_pager "$@"
