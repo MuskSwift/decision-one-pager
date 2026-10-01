@@ -11,7 +11,7 @@ import urllib.request
 from .validate import REQUIRED_HEADINGS
 
 XAI_API_URL = "https://api.x.ai/v1/chat/completions"
-XAI_MODEL = "grok-4.6"
+XAI_MODEL = "grok-4.7-build-fast"
 GROK_BIN_DIR = os.path.join(os.path.expanduser("~"), ".grok", "bin")
 
 HEADING_BLOCK = "\n".join(REQUIRED_HEADINGS)
@@ -139,7 +139,7 @@ def _generate_via_grok_cli(topic: str, materials: str, taboo: str) -> str:
         "-m",
         XAI_MODEL,
         "--effort",
-        "high",
+        "xhigh",
         "--always-approve",
     ]
     try:

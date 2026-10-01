@@ -37,7 +37,7 @@ There is also a thin wrapper at `bin/decision-one-pager`.
 
 ## Authentication (bring your own)
 
-Generation uses model **grok-4.6**. This project does not ship API keys or implement login.
+Generation uses model **grok-4.7-build-fast**. This project does not ship API keys or implement login.
 
 **Option A — xAI HTTP API (preferred when a key is present).** Set `XAI_API_KEY` in the environment. The CLI POSTs to `https://api.x.ai/v1/chat/completions` with stdlib `urllib.request`.
 
@@ -49,7 +49,7 @@ export XAI_API_KEY="xai-..."
 
 ```bash
 export PATH="$HOME/.grok/bin:$PATH"
-grok -p "<prompt>" -m grok-4.6 --effort high --always-approve
+grok -p "<prompt>" -m grok-4.7-build-fast --effort xhigh --always-approve
 ```
 
 Authenticate the grok CLI yourself before running this tool. If neither a key nor `grok` is available, generation fails.
